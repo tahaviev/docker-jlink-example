@@ -9,7 +9,7 @@ WORKDIR /opt
 COPY --from=mvn /opt/app/target/app.jar app/app.jar
 RUN ["jlink", "--output", "jre", "--module-path", "app/app.jar", "--add-modules", "http.server.example"]
 
-FROM frolvlad/alpine-glibc
+FROM frolvlad/alpine-glibc:alpine-3.9_glibc-2.29
 COPY --from=jlink /opt /opt
 ENV PATH $PATH:/opt/jre/bin
 ENTRYPOINT ["java", "-jar", "/opt/app/app.jar"]
