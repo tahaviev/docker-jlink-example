@@ -3,30 +3,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.github.tahaviev</groupId>
     <artifactId>http-server-example</artifactId>
     <version>0.1-SNAPSHOT</version>
+
     <build>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
-                    <source>12</source>
-                    <target>12</target>
+                    <release>11</release>
                 </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.2.0</version>
                 <configuration>
                     <finalName>app</finalName>
                     <archive>
                         <manifest>
-                            <mainClass>
-                                com.github.tahaviev.Main
-                            </mainClass>
+                            <mainClass>com.github.tahaviev.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
